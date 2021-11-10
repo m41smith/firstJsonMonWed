@@ -32,6 +32,7 @@ public class Main {
         var usefulData = response.body();
         System.out.println(usefulData);
         var dataParser = new Gson();
+        UniversityDataType[] parsedData = dataParser.fromJson(usefulData), UniversityDataType[].class;
         //http response codes
         //200 - level response code means all works
         //400 - level errors on client side
